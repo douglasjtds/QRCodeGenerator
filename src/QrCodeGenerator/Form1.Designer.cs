@@ -43,16 +43,16 @@ namespace QrCodeGenerator
             // 
             // picQrCode
             // 
-            this.picQrCode.Location = new System.Drawing.Point(12, 12);
+            this.picQrCode.Location = new System.Drawing.Point(482, 12);
             this.picQrCode.Name = "picQrCode";
-            this.picQrCode.Size = new System.Drawing.Size(239, 239);
+            this.picQrCode.Size = new System.Drawing.Size(500, 500);
             this.picQrCode.TabIndex = 0;
             this.picQrCode.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(285, 12);
+            this.label1.Location = new System.Drawing.Point(22, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
             this.label1.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace QrCodeGenerator
             // 
             // textBoxURL
             // 
-            this.textBoxURL.Location = new System.Drawing.Point(288, 45);
+            this.textBoxURL.Location = new System.Drawing.Point(25, 69);
             this.textBoxURL.Multiline = true;
             this.textBoxURL.Name = "textBoxURL";
             this.textBoxURL.Size = new System.Drawing.Size(438, 51);
@@ -71,7 +71,7 @@ namespace QrCodeGenerator
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(285, 130);
+            this.label2.Location = new System.Drawing.Point(22, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace QrCodeGenerator
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(502, 130);
+            this.label3.Location = new System.Drawing.Point(239, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 4;
@@ -89,21 +89,21 @@ namespace QrCodeGenerator
             // 
             // textBoxHeight
             // 
-            this.textBoxHeight.Location = new System.Drawing.Point(329, 127);
+            this.textBoxHeight.Location = new System.Drawing.Point(66, 151);
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(109, 20);
             this.textBoxHeight.TabIndex = 5;
             // 
             // textBoxWidth
             // 
-            this.textBoxWidth.Location = new System.Drawing.Point(543, 127);
+            this.textBoxWidth.Location = new System.Drawing.Point(280, 151);
             this.textBoxWidth.Name = "textBoxWidth";
             this.textBoxWidth.Size = new System.Drawing.Size(109, 20);
             this.textBoxWidth.TabIndex = 6;
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(288, 202);
+            this.buttonGenerate.Location = new System.Drawing.Point(25, 226);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(170, 23);
             this.buttonGenerate.TabIndex = 7;
@@ -113,7 +113,7 @@ namespace QrCodeGenerator
             // 
             // buttonDownloadJPG
             // 
-            this.buttonDownloadJPG.Location = new System.Drawing.Point(505, 202);
+            this.buttonDownloadJPG.Location = new System.Drawing.Point(242, 226);
             this.buttonDownloadJPG.Name = "buttonDownloadJPG";
             this.buttonDownloadJPG.Size = new System.Drawing.Size(170, 23);
             this.buttonDownloadJPG.TabIndex = 8;
@@ -125,7 +125,7 @@ namespace QrCodeGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 291);
+            this.ClientSize = new System.Drawing.Size(1009, 533);
             this.Controls.Add(this.buttonDownloadJPG);
             this.Controls.Add(this.buttonGenerate);
             this.Controls.Add(this.textBoxWidth);

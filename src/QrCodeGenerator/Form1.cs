@@ -40,16 +40,22 @@ namespace QrCodeGenerator
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            if (textBoxURL.Text == string.Empty || textBoxHeight.Text == string.Empty && textBoxWidth.Text == string.Empty)
+            if (textBoxURL.Text == string.Empty)
             {
                 MessageBox.Show("Invalid info. Complete all info to generate QRCode...");
                 textBoxURL.Focus();
                 return;
             }
+            else if (textBoxHeight.Text == string.Empty || textBoxWidth.Text == string.Empty)
+            {
+                var defaultValue = "500";
+                textBoxHeight.Text = defaultValue;
+                textBoxWidth.Text = defaultValue;
+            }
             try
             {
-                int largura = Convert.ToInt32(textBoxWidth.Text);
-                int altura = Convert.ToInt32(textBoxHeight.Text);
+                int largura = Convert.ToInt32(textBoxHeight.Text);
+                int altura = Convert.ToInt32(textBoxWidth.Text);
                 picQrCode.Image = GenerateQRCode(largura, altura, textBoxURL.Text);
             }
             catch (Exception ex)
@@ -80,7 +86,7 @@ namespace QrCodeGenerator
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.Filter = "JPG(*.JPG)|*.jpg";
 
-            if(saveFile.ShowDialog() == DialogResult.OK)
+            if (saveFile.ShowDialog() == DialogResult.OK)
                 generatedImage.Save(saveFile.FileName);
         }
     }
