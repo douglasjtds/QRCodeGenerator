@@ -12,6 +12,7 @@ namespace QrCodeGenerator
 {
     public partial class Form1 : Form
     {
+        public Bitmap generatedImage;
         public Form1()
         {
             InitializeComponent();
@@ -65,13 +66,22 @@ namespace QrCodeGenerator
                 var encOptions = new ZXing.Common.EncodingOptions() { Width = width, Height = height, Margin = 0 };
                 bw.Options = encOptions;
                 bw.Format = ZXing.BarcodeFormat.QR_CODE;
-                var resultado = new Bitmap(bw.Write(text));
-                return resultado;
+                generatedImage = new Bitmap(bw.Write(text));
+                return generatedImage;
             }
             catch
             {
                 throw;
             }
+        }
+
+        private void buttonDownloadJPG_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "JPG(*.JPG)|*.jpg";
+
+            if(saveFile.ShowDialog() == DialogResult.OK)
+                generatedImage.Save(saveFile.FileName);
         }
     }
 }

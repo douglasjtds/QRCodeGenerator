@@ -37,6 +37,7 @@ namespace QrCodeGenerator
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.textBoxWidth = new System.Windows.Forms.TextBox();
             this.buttonGenerate = new System.Windows.Forms.Button();
+            this.buttonDownloadJPG = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picQrCode)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,19 +103,30 @@ namespace QrCodeGenerator
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(388, 204);
+            this.buttonGenerate.Location = new System.Drawing.Point(288, 202);
             this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(252, 23);
+            this.buttonGenerate.Size = new System.Drawing.Size(170, 23);
             this.buttonGenerate.TabIndex = 7;
             this.buttonGenerate.Text = "Generate";
             this.buttonGenerate.UseVisualStyleBackColor = true;
             this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            // 
+            // buttonDownloadJPG
+            // 
+            this.buttonDownloadJPG.Location = new System.Drawing.Point(505, 202);
+            this.buttonDownloadJPG.Name = "buttonDownloadJPG";
+            this.buttonDownloadJPG.Size = new System.Drawing.Size(170, 23);
+            this.buttonDownloadJPG.TabIndex = 8;
+            this.buttonDownloadJPG.Text = "Download image";
+            this.buttonDownloadJPG.UseVisualStyleBackColor = true;
+            this.buttonDownloadJPG.Click += new System.EventHandler(this.buttonDownloadJPG_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 291);
+            this.Controls.Add(this.buttonDownloadJPG);
             this.Controls.Add(this.buttonGenerate);
             this.Controls.Add(this.textBoxWidth);
             this.Controls.Add(this.textBoxHeight);
@@ -142,6 +154,7 @@ namespace QrCodeGenerator
         private System.Windows.Forms.TextBox textBoxHeight;
         private System.Windows.Forms.TextBox textBoxWidth;
         private System.Windows.Forms.Button buttonGenerate;
+        private System.Windows.Forms.Button buttonDownloadJPG;
     }
 }
 
